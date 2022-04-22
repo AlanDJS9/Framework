@@ -29,8 +29,9 @@ struct PhysicsBody
 	//Construct
 	PhysicsBody();
 	PhysicsBody(float mass_, float rotationalInertia_);
-
+	PhysicsBody(Vec3 initialPos_);
 	//Handy methods
+
 	void applyTorque(Vec3 torque_) {
 		angularAcc = torque_.x / rotationalInertia;
 		force = Vec3(((force.x) * cos(angularDis) - (force.y * sin(angularDis))), ((force.x) * sin(angularDis) + ((force.y) * cos(angularDis))), 0.0);

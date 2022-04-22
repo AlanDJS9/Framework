@@ -153,10 +153,10 @@
     <ClCompile Include="Plane.cpp" />
     <ClCompile Include="Printer.cpp" />
     <ClCompile Include="Randomizer.cpp" />
-    <ClCompile Include="Ray.cpp" />
     <ClCompile Include="Scene0.cpp" />
     <ClCompile Include="Scene01.cpp" />
-    <ClCompile Include="Scene02.cpp" />
+    <ClCompile Include="Scene03.cpp" />
+    <ClCompile Include="Scene04.cpp" />
     <ClCompile Include="Scene1.cpp" />
     <ClCompile Include="Scene2.cpp" />
     <ClCompile Include="Scene3.cpp" />
@@ -166,8 +166,6 @@
     <ClCompile Include="Scene7.cpp" />
     <ClCompile Include="Scene8.cpp" />
     <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="Vec3.cpp" />
-    <ClCompile Include="Vec4.cpp" />
     <ClCompile Include="VMath.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
@@ -182,11 +180,12 @@
     <ClInclude Include="Plane.h" />
     <ClInclude Include="Printer.h" />
     <ClInclude Include="Randomizer.h" />
-    <ClInclude Include="Ray.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="Scene0.h" />
     <ClInclude Include="Scene01.h" />
     <ClInclude Include="Scene02.h" />
+    <ClInclude Include="Scene03.h" />
+    <ClInclude Include="Scene04.h" />
     <ClInclude Include="Scene1.h" />
     <ClInclude Include="Scene2.h" />
     <ClInclude Include="Scene3.h" />
@@ -196,8 +195,6 @@
     <ClInclude Include="Scene7.h" />
     <ClInclude Include="Scene8.h" />
     <ClInclude Include="Timer.h" />
-    <ClInclude Include="Vec3.h" />
-    <ClInclude Include="Vec4.h" />
     <ClInclude Include="Vector.h" />
     <ClInclude Include="VMath.h" />
     <ClInclude Include="Window.h" />

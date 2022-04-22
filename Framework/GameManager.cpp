@@ -10,7 +10,9 @@
 #include "Scene6.h"//GAME101 - Umer's Gravity well but cool  
 #include "Scene7.h"//Template - Random boulders colliding at will
 #include "Scene8.h"//Boy running 
-#include "Scene01.h"//Boy running 
+#include "Scene01.h"//spaceship
+#include "Scene03.h"//collision
+#include "Scene04.h"//collision
 
 #include <iostream>
 
@@ -46,7 +48,7 @@ bool GameManager::OnCreate() {
 		return false;
 	}
 	//To change scenes
-	currentScene = new Scene01(windowPtr->GetSDL_Window());
+	currentScene = new Scene04(windowPtr->GetSDL_Window());
 	if (currentScene == nullptr) {
 		OnDestroy();
 		return false;
@@ -118,21 +120,21 @@ void GameManager::HandleEvents(const SDL_Event& sdlEvent)
 		case SDL_SCANCODE_F1:
 			currentScene->OnDestroy();
 			delete currentScene;
-			currentScene = new Scene1(windowPtr->GetSDL_Window());
+			currentScene = new Scene01(windowPtr->GetSDL_Window());
 			currentScene->OnCreate();
 
 			break;
 		case SDL_SCANCODE_F2:
 			currentScene->OnDestroy();
 			delete currentScene;
-			currentScene = new Scene2(windowPtr->GetSDL_Window());
+			currentScene = new Scene03(windowPtr->GetSDL_Window());
 			currentScene->OnCreate();
 
 			break;
 		case SDL_SCANCODE_F3:
 			currentScene->OnDestroy();
 			delete currentScene;
-			currentScene = new Scene3(windowPtr->GetSDL_Window());
+			currentScene = new Scene04(windowPtr->GetSDL_Window());
 			currentScene->OnCreate();
 			break;
 
@@ -173,13 +175,7 @@ void GameManager::HandleEvents(const SDL_Event& sdlEvent)
 			currentScene->OnCreate();
 
 			break;
-		case SDL_SCANCODE_F10:
-			currentScene->OnDestroy();
-			delete currentScene;
-			currentScene = new Scene01(windowPtr->GetSDL_Window());
-			currentScene->OnCreate();
 
-			break;
 		case SDL_SCANCODE_M:
 			currentScene->OnDestroy();
 			delete currentScene;

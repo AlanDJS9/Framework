@@ -7,7 +7,7 @@ void Plane::set(float x, float y, float z, float d)
 	plane.x = x;
 	plane.y = y;
 	plane.z = z;
-	plane.d = d;
+	plane.w = d;
 }
 Plane::Plane()
 {
@@ -51,34 +51,7 @@ void Plane::print()
 	cout << "A: " << plane.x << endl;
 	cout << "B: " << plane.y << endl;
 	cout << "C: " << plane.z << endl;
-	cout << "D: " << plane.d << endl;
+	cout << "D: " << plane.w << endl;
 
 }
 
-Vec3 Plane::intersectionPoint(Ray ray)
-{
-	Vec3 N(plane.x, plane.y, plane.z);
-	float D = plane.d;
-	Vec3 V = ray.dir;
-	Vec3 S = ray.start;
-	float t;
-	float dot = N.Dot(V);
-
-	if (abs(dot) <= 0.0001)
-	{
-		//If line lies in the plane
-		float distance = N.Dot(S) + D;
-
-		if (distance <= 0.00001)
-		{
-			printf("\nLine lies in plane.\n");
-		}
-		else { printf("\nNo intersection\n"); }
-		//No intersection
-	}
-	else {
-		t = -(D + N.Dot(S)) / (N.Dot(V));
-		return ray.currentPosition(t);
-	}
-	return Vec3(NULL, NULL, NULL);
-}

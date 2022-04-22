@@ -1,17 +1,10 @@
-#pragma once
 #ifndef PLANE_H
 #define PLANE_H
-
-#include <iostream>
-#include <math.h>
 #include "Vector.h"
+#include "Matrix.h"
+using namespace MATH;
 
-#include "Ray.h"
-
-using namespace std;
-
-class Plane
-{
+class Plane {
 public:
 	//Class variables
 	Vec4 plane;
@@ -28,9 +21,9 @@ public:
 	Plane(const Vec3& v0, const Vec3& v1, const Vec3& v2);
 
 	//Method to calculate the position
-	Vec3 intersectionPoint(Ray ray);
 	Plane(Vec3 normal, Vec3 p);
 	Plane(Vec3 normal, float _d);
+
 	void set(float x, float y, float z, float d);
 	void print();
 
